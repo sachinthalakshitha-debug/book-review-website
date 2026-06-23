@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Reviewer profile - My favorite books and reading activity">
+  <title>My Profile - LuminaReads</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- ============================================================
+       HEADER & NAVIGATION
+       ============================================================ -->
+  <header>
+    <div class="header-container">
+      <div class="logo">Lumina<span>Reads</span></div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="books.html">Browse Books</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="profile.html" class="active">Profile</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       PROFILE BANNER SECTION
+       ============================================================ -->
+  <section class="profile-banner">
+    <div class="profile-avatar">👤</div>
+    <div>
+      <h2>Sarah Chen</h2>
+      <p class="profile-bio">
+        Literature major with a passion for historical fiction, contemporary philosophy, and experimental narratives. 
+        Always seeking thoughtful explorations of the human experience. Book lover, coffee enthusiast, and chronic annotator of margins.
+      </p>
+      <div class="profile-stats">
+        <div class="stat">
+          <div class="stat-value">42</div>
+          <div class="stat-label">Reviews Written</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">150</div>
+          <div class="stat-label">Followers</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">87</div>
+          <div class="stat-label">Books Read</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">4.7</div>
+          <div class="stat-label">Avg Rating</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MY TOP PICKS SECTION
+       ============================================================ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>My Top Picks</h2>
+        <p>Books I've rated 5 stars and highly recommend</p>
+      </div>
+
+      <div class="grid grid-3">
+        <!-- Book 1 -->
+        <div class="book-card">
+          <div class="book-card-image">
+            <span>Book Cover Image</span>
+          </div>
+          <div class="book-card-content">
+            <h3 class="book-card-title">The Song of Achilles</h3>
+            <p class="book-card-author">Madeline Miller</p>
+            <div style="margin-bottom: var(--spacing-sm);">
+              <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Fiction</span>
+            </div>
+            <div class="rating">
+              <span class="stars">★★★★★</span> 5.0/5
+            </div>
+            <p class="review-snippet">"A deeply moving retelling of ancient mythology through the lens of intimate human connection. Miller's prose is exquisite."</p>
+            <div class="book-card-footer">
+              <a href="book-detail.html" class="btn btn-small btn-secondary">Read Review</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 2 -->
+        <div class="book-card">
+          <div class="book-card-image">
+            <span>Book Cover Image</span>
+          </div>
+          <div class="book-card-content">
+            <h3 class="book-card-title">Educated</h3>
+            <p class="book-card-author">Tara Westover</p>
+            <div style="margin-bottom: var(--spacing-sm);">
+              <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Biography</span>
+            </div>
+            <div class="rating">
+              <span class="stars">★★★★★</span> 5.0/5
+            </div>
+            <p class="review-snippet">"A harrowing and ultimately triumphant memoir about the power of education and intellectual awakening. Essential reading."</p>
+            <div class="book-card-footer">
+              <a href="book-detail.html" class="btn btn-small btn-secondary">Read Review</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 3 -->
+        <div class="book-card">
+          <div class="book-card-image">
+            <span>Book Cover Image</span>
+          </div>
+          <div class="book-card-content">
+            <h3 class="book-card-title">The Midnight Library</h3>
+            <p class="book-card-author">Matt Haig</p>
+            <div style="margin-bottom: var(--spacing-sm);">
+              <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Fiction</span>
+            </div>
+            <div class="rating">
+              <span class="stars">★★★★★</span> 5.0/5
+            </div>
+            <p class="review-snippet">"A profound meditation on choice, regret, and the possibilities within any single life. Haig's wisdom is accessible and deeply moving."</p>
+            <div class="book-card-footer">
+              <a href="book-detail.html" class="btn btn-small btn-secondary">Read Review</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 4 -->
+        <div class="book-card">
+          <div class="book-card-image">
+            <span>Book Cover Image</span>
+          </div>
+          <div class="book-card-content">
+            <h3 class="book-card-title">All the Light We Cannot See</h3>
+            <p class="book-card-author">Anthony Doerr</p>
+            <div style="margin-bottom: var(--spacing-sm);">
+              <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Historical Fiction</span>
+            </div>
+            <div class="rating">
+              <span class="stars">★★★★★</span> 5.0/5
+            </div>
+            <p class="review-snippet">"An extraordinarily beautiful exploration of two lives intersecting during WWII. Doerr's poetic prose captures the tragedy and humanity of war."</p>
+            <div class="book-card-footer">
+              <a href="book-detail.html" class="btn btn-small btn-secondary">Read Review</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 5 -->
+        <div class="book-card">
+          <div class="book-card-image">
+            <span>Book Cover Image</span>
+          </div>
+          <div class="book-card-content">
+            <h3 class="book-card-title">Braiding Sweetgrass</h3>
+            <p class="book-card-author">Robin Wall Kimmerer</p>
+            <div style="margin-bottom: var(--spacing-sm);">
+              <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Essay</span>
+            </div>
+            <div class="rating">
+              <span class="stars">★★★★★</span> 5.0/5
+            </div>
+            <p class="review-snippet">"Kimmerer weaves Indigenous wisdom with scientific observation into a powerful meditation on reciprocity and our relationship with nature."</p>
+            <div class="book-card-footer">
+              <a href="book-detail.html" class="btn btn-small btn-secondary">Read Review</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 6 -->
+        <div class="book-card">
+          <div class="book-card-image">
+            <span>Book Cover Image</span>
+          </div>
+          <div class="book-card-content">
+            <h3 class="book-card-title">Piranesi</h3>
+            <p class="book-card-author">Susanna Clarke</p>
+            <div style="margin-bottom: var(--spacing-sm);">
+              <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Fantasy</span>
+            </div>
+            <div class="rating">
+              <span class="stars">★★★★★</span> 5.0/5
+            </div>
+            <p class="review-snippet">"An enigmatic and hauntingly beautiful novel that defies genre. Clarke's mysterious world lingers in the mind long after completion."</p>
+            <div class="book-card-footer">
+              <a href="book-detail.html" class="btn btn-small btn-secondary">Read Review</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       READING ACTIVITY SECTION
+       ============================================================ -->
+  <section class="section" style="background-color: var(--hover-bg);">
+    <div class="container">
+      <h2 style="margin-bottom: var(--spacing-xl);">Recent Reading Activity</h2>
+
+      <div class="grid grid-2" style="max-width: 900px;">
+        <!-- Activity 1 -->
+        <div class="activity-item">
+          <div class="activity-date">
+            <strong>Jun</strong>
+            <span>21</span>
+          </div>
+          <div class="activity-info">
+            <h5>Finished "The Midnight Library"</h5>
+            <p class="activity-text">Started: June 18 | 304 pages | ★★★★★</p>
+          </div>
+        </div>
+
+        <!-- Activity 2 -->
+        <div class="activity-item">
+          <div class="activity-date">
+            <strong>Jun</strong>
+            <span>15</span>
+          </div>
+          <div class="activity-info">
+            <h5>Started "Project Hail Mary"</h5>
+            <p class="activity-text">Andy Weir | Science Fiction | 476 pages</p>
+          </div>
+        </div>
+
+        <!-- Activity 3 -->
+        <div class="activity-item">
+          <div class="activity-date">
+            <strong>Jun</strong>
+            <span>10</span>
+          </div>
+          <div class="activity-info">
+            <h5>Finished "Piranesi"</h5>
+            <p class="activity-text">Completed in 5 days | 234 pages | ★★★★★</p>
+          </div>
+        </div>
+
+        <!-- Activity 4 -->
+        <div class="activity-item">
+          <div class="activity-date">
+            <strong>Jun</strong>
+            <span>05</span>
+          </div>
+          <div class="activity-info">
+            <h5>Posted Review: "All the Light We Cannot See"</h5>
+            <p class="activity-text">Historical Fiction | 544 pages | ★★★★★</p>
+          </div>
+        </div>
+
+        <!-- Activity 5 -->
+        <div class="activity-item">
+          <div class="activity-date">
+            <strong>May</strong>
+            <span>31</span>
+          </div>
+          <div class="activity-info">
+            <h5>Finished "Braiding Sweetgrass"</h5>
+            <p class="activity-text">Completed in 2 weeks | 386 pages | ★★★★★</p>
+          </div>
+        </div>
+
+        <!-- Activity 6 -->
+        <div class="activity-item">
+          <div class="activity-date">
+            <strong>May</strong>
+            <span>25</span>
+          </div>
+          <div class="activity-info">
+            <h5>Posted Review: "Educated"</h5>
+            <p class="activity-text">Biography | 352 pages | ★★★★★</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       STATS SECTION
+       ============================================================ -->
+  <section class="section">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: var(--spacing-xl);">Reading Statistics</h2>
+
+      <div class="grid grid-3" style="max-width: 800px; margin: 0 auto;">
+        <div class="card" style="text-align: center;">
+          <h3 style="color: var(--secondary); font-size: 2.5rem; margin-bottom: var(--spacing-sm);">87</h3>
+          <p class="subtitle" style="margin: 0;">Books Read</p>
+        </div>
+        <div class="card" style="text-align: center;">
+          <h3 style="color: var(--accent); font-size: 2.5rem; margin-bottom: var(--spacing-sm);">21,450</h3>
+          <p class="subtitle" style="margin: 0;">Total Pages Read</p>
+        </div>
+        <div class="card" style="text-align: center;">
+          <h3 style="color: var(--secondary); font-size: 2.5rem; margin-bottom: var(--spacing-sm);">4.7</h3>
+          <p class="subtitle" style="margin: 0;">Average Rating</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>About LuminaReads</h4>
+        <p>A premier platform for academic and recreational book reviews, connecting readers and celebrating literature in all its forms.</p>
+        <div class="social-links">
+          <a href="#" title="Facebook">f</a>
+          <a href="#" title="Twitter">𝕏</a>
+          <a href="#" title="Instagram">📷</a>
+          <a href="#" title="LinkedIn">in</a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="books.html">Browse Books</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="profile.html">My Profile</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#privacy">Privacy Policy</a></li>
+          <li><a href="#terms">Terms of Service</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Get in Touch</h4>
+        <p>Email: <a href="mailto:hello@luminareads.edu">hello@luminareads.edu</a></p>
+        <p>Located at: University Literary Institute<br>Building A, Room 204</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 LuminaReads. All rights reserved. | Crafted for literature lovers everywhere.</p>
+    </div>
+  </footer>
+</body>
+</html>

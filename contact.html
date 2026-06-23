@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get in touch with LuminaReads - contact form and information">
+  <title>Contact Us - LuminaReads</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- ============================================================
+       HEADER & NAVIGATION
+       ============================================================ -->
+  <header>
+    <div class="header-container">
+      <div class="logo">Lumina<span>Reads</span></div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="books.html">Browse Books</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="profile.html">Profile</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       HERO SECTION
+       ============================================================ -->
+  <section class="hero">
+    <h1>Get in Touch</h1>
+    <p class="subtitle">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+  </section>
+
+  <!-- ============================================================
+       CONTACT CONTENT WRAPPER
+       ============================================================ -->
+  <section class="section">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 280px; gap: var(--spacing-xl); max-width: 900px; margin: 0 auto;">
+        
+        <!-- Contact Form -->
+        <div>
+          <h2 style="margin-bottom: var(--spacing-lg);">Send us a Message</h2>
+          
+          <form class="card" style="background-color: var(--surface); border: 1px solid var(--border-color);">
+            <div class="form-group">
+              <label for="fullname">Full Name <span style="color: var(--secondary);">*</span></label>
+              <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address <span style="color: var(--secondary);">*</span></label>
+              <input type="email" id="email" name="email" placeholder="your.email@university.edu" required>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject <span style="color: var(--secondary);">*</span></label>
+              <select id="subject" name="subject" required>
+                <option value="">Select a subject...</option>
+                <option value="general">General Inquiry</option>
+                <option value="feedback">Feedback & Suggestions</option>
+                <option value="bug">Report a Bug</option>
+                <option value="feature">Feature Request</option>
+                <option value="review">Review Issue</option>
+                <option value="community">Community Guidelines</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message <span style="color: var(--secondary);">*</span></label>
+              <textarea 
+                id="message" 
+                name="message" 
+                placeholder="Please share your message, question, or feedback here. We read every message and will get back to you within 48 hours."
+                required>
+              </textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+          </form>
+
+          <p style="font-size: 0.85rem; color: var(--text-light); margin-top: var(--spacing-lg);">
+            <strong>Note:</strong> This is a static site created for academic purposes. Form submissions are not currently processed. 
+            For actual inquiries, please use the email address provided in the sidebar.
+          </p>
+        </div>
+
+        <!-- Sidebar Information -->
+        <aside class="sidebar" style="height: fit-content;">
+          <h3 style="margin-bottom: var(--spacing-lg);">Quick Info</h3>
+
+          <div style="margin-bottom: var(--spacing-lg); padding-bottom: var(--spacing-lg); border-bottom: 1px solid var(--border-color);">
+            <h5 style="color: var(--secondary); margin-bottom: var(--spacing-sm);">Email</h5>
+            <a href="mailto:hello@luminareads.edu" style="word-break: break-all;">
+              hello@luminareads.edu
+            </a>
+          </div>
+
+          <div style="margin-bottom: var(--spacing-lg); padding-bottom: var(--spacing-lg); border-bottom: 1px solid var(--border-color);">
+            <h5 style="color: var(--secondary); margin-bottom: var(--spacing-sm);">Location</h5>
+            <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">
+              University Literary Institute<br>
+              Building A, Room 204<br>
+              Main Campus
+            </p>
+          </div>
+
+          <div style="margin-bottom: var(--spacing-lg); padding-bottom: var(--spacing-lg); border-bottom: 1px solid var(--border-color);">
+            <h5 style="color: var(--secondary); margin-bottom: var(--spacing-sm);">Office Hours</h5>
+            <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">
+              Monday - Friday<br>
+              10:00 AM - 4:00 PM<br>
+              EST
+            </p>
+          </div>
+
+          <div>
+            <h5 style="color: var(--secondary); margin-bottom: var(--spacing-sm);">Follow Us</h5>
+            <div class="social-links" style="gap: var(--spacing-sm);">
+              <a href="#" title="Facebook" style="margin: 0; font-size: 0.9rem;">Facebook</a>
+              <a href="#" title="Twitter" style="margin: 0; font-size: 0.9rem;">Twitter</a>
+              <a href="#" title="Instagram" style="margin: 0; font-size: 0.9rem;">Instagram</a>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FAQ SECTION
+       ============================================================ -->
+  <section class="section" style="background-color: var(--hover-bg);">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: var(--spacing-xl);">Frequently Asked Questions</h2>
+
+      <div style="max-width: 800px; margin: 0 auto; display: grid; gap: var(--spacing-lg);">
+        
+        <!-- FAQ Item 1 -->
+        <details class="card" style="cursor: pointer;">
+          <summary style="font-weight: 600; color: var(--primary); padding: var(--spacing-md); user-select: none;">
+            How do I create an account on LuminaReads?
+          </summary>
+          <p style="padding: var(--spacing-md) var(--spacing-md) 0 var(--spacing-md); color: var(--text-secondary); margin: 0;">
+            You can sign up for a free account by visiting the main page and clicking the "Join Now" button. 
+            Simply provide your name, email address, and create a password. Once verified, you'll have full access 
+            to the platform and can immediately start writing reviews and connecting with other readers.
+          </p>
+        </details>
+
+        <!-- FAQ Item 2 -->
+        <details class="card" style="cursor: pointer;">
+          <summary style="font-weight: 600; color: var(--primary); padding: var(--spacing-md); user-select: none;">
+            Can I edit or delete my reviews after posting?
+          </summary>
+          <p style="padding: var(--spacing-md) var(--spacing-md) 0 var(--spacing-md); color: var(--text-secondary); margin: 0;">
+            Yes! You can edit or delete your reviews at any time from your profile page. Simply navigate to "My Reviews," 
+            find the review you'd like to modify, and click the edit or delete button. Changes are saved immediately, 
+            and other members will see the updated version.
+          </p>
+        </details>
+
+        <!-- FAQ Item 3 -->
+        <details class="card" style="cursor: pointer;">
+          <summary style="font-weight: 600; color: var(--primary); padding: var(--spacing-md); user-select: none;">
+            How are books organized on the browse page?
+          </summary>
+          <p style="padding: var(--spacing-md) var(--spacing-md) 0 var(--spacing-md); color: var(--text-secondary); margin: 0;">
+            Books are organized by genre, rating, and publication date. Use our filtering sidebar to narrow down your search 
+            by selecting specific genres (Fiction, Sci-Fi, Biography, etc.) or minimum rating (3+ stars, 4+ stars). 
+            You can also sort results by popularity, top-rated, or newest first.
+          </p>
+        </details>
+
+        <!-- FAQ Item 4 -->
+        <details class="card" style="cursor: pointer;">
+          <summary style="font-weight: 600; color: var(--primary); padding: var(--spacing-md); user-select: none;">
+            What should I include in my book review?
+          </summary>
+          <p style="padding: var(--spacing-md) var(--spacing-md) 0 var(--spacing-md); color: var(--text-secondary); margin: 0;">
+            A great review includes: (1) your overall rating, (2) a brief summary without major spoilers, (3) what you liked 
+            about the book, (4) any criticisms or areas for improvement, and (5) personal reflection on how the book impacted you. 
+            We encourage thoughtful analysis over simple summaries. Use spoiler tags when discussing plot points.
+          </p>
+        </details>
+
+        <!-- FAQ Item 5 -->
+        <details class="card" style="cursor: pointer;">
+          <summary style="font-weight: 600; color: var(--primary); padding: var(--spacing-md); user-select: none;">
+            Can I follow other reviewers?
+          </summary>
+          <p style="padding: var(--spacing-md) var(--spacing-md) 0 var(--spacing-md); color: var(--text-secondary); margin: 0;">
+            Absolutely! When you visit another member's profile, you can click the "Follow" button to keep up with their latest 
+            reviews and activity. You'll see their posts in your personalized feed. You can unfollow anyone at any time. 
+            Following is a great way to discover new perspectives on books you love.
+          </p>
+        </details>
+
+        <!-- FAQ Item 6 -->
+        <details class="card" style="cursor: pointer;">
+          <summary style="font-weight: 600; color: var(--primary); padding: var(--spacing-md); user-select: none;">
+            What is the community moderation policy?
+          </summary>
+          <p style="padding: var(--spacing-md) var(--spacing-md) 0 var(--spacing-md); color: var(--text-secondary); margin: 0;">
+            We maintain a respectful community by moderating content that violates our guidelines: no hate speech, harassment, 
+            or spam. All reviews should focus on the book's content, not the author's personal beliefs or appearance. 
+            Members who repeatedly violate guidelines may have their accounts suspended or permanently removed.
+          </p>
+        </details>
+
+        <!-- FAQ Item 7 -->
+        <details class="card" style="cursor: pointer;">
+          <summary style="font-weight: 600; color: var(--primary); padding: var(--spacing-md); user-select: none;">
+            Is LuminaReads available on mobile?
+          </summary>
+          <p style="padding: var(--spacing-md) var(--spacing-md) 0 var(--spacing-md); color: var(--text-secondary); margin: 0;">
+            Yes! LuminaReads is fully responsive and works beautifully on smartphones, tablets, and desktop computers. 
+            You can browse books, write reviews, and manage your profile on any device. No app installation required—
+            just visit our website in your mobile browser.
+          </p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>About LuminaReads</h4>
+        <p>A premier platform for academic and recreational book reviews, connecting readers and celebrating literature in all its forms.</p>
+        <div class="social-links">
+          <a href="#" title="Facebook">f</a>
+          <a href="#" title="Twitter">𝕏</a>
+          <a href="#" title="Instagram">📷</a>
+          <a href="#" title="LinkedIn">in</a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="books.html">Browse Books</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="profile.html">My Profile</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#privacy">Privacy Policy</a></li>
+          <li><a href="#terms">Terms of Service</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Get in Touch</h4>
+        <p>Email: <a href="mailto:hello@luminareads.edu">hello@luminareads.edu</a></p>
+        <p>Located at: University Literary Institute<br>Building A, Room 204</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 LuminaReads. All rights reserved. | Crafted for literature lovers everywhere.</p>
+    </div>
+  </footer>
+</body>
+</html>

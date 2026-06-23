@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse and filter our extensive collection of book reviews">
+  <title>Browse Books - LuminaReads</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- ============================================================
+       HEADER & NAVIGATION
+       ============================================================ -->
+  <header>
+    <div class="header-container">
+      <div class="logo">Lumina<span>Reads</span></div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="books.html" class="active">Browse Books</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="profile.html">Profile</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       PAGE TITLE
+       ============================================================ -->
+  <section style="background-color: var(--hover-bg); padding: var(--spacing-xl) var(--spacing-lg); border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+      <h1 style="margin-bottom: var(--spacing-sm);">Explore Our Collection</h1>
+      <p class="subtitle" style="margin: 0;">Discover thoughtfully reviewed books across all genres</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MAIN CONTENT AREA WITH SIDEBAR
+       ============================================================ -->
+  <div class="content-wrapper">
+    <!-- Sidebar with Filters -->
+    <aside class="sidebar">
+      <h3 style="margin-bottom: var(--spacing-lg);">Filter & Sort</h3>
+
+      <!-- Genre Filter -->
+      <div class="filter-group">
+        <h4>Genre</h4>
+        <div class="filter-option">
+          <input type="radio" id="genre-all" name="genre" value="all" checked>
+          <label for="genre-all">All Genres</label>
+        </div>
+        <div class="filter-option">
+          <input type="radio" id="genre-fiction" name="genre" value="fiction">
+          <label for="genre-fiction">Fiction</label>
+        </div>
+        <div class="filter-option">
+          <input type="radio" id="genre-scifi" name="genre" value="scifi">
+          <label for="genre-scifi">Science Fiction</label>
+        </div>
+        <div class="filter-option">
+          <input type="radio" id="genre-mystery" name="genre" value="mystery">
+          <label for="genre-mystery">Mystery</label>
+        </div>
+        <div class="filter-option">
+          <input type="radio" id="genre-biography" name="genre" value="biography">
+          <label for="genre-biography">Biography</label>
+        </div>
+        <div class="filter-option">
+          <input type="radio" id="genre-selfhelp" name="genre" value="selfhelp">
+          <label for="genre-selfhelp">Self-Help</label>
+        </div>
+      </div>
+
+      <!-- Rating Filter -->
+      <div class="filter-group">
+        <h4>Rating</h4>
+        <div class="filter-option">
+          <input type="radio" id="rating-all" name="rating" value="all" checked>
+          <label for="rating-all">All Ratings</label>
+        </div>
+        <div class="filter-option">
+          <input type="radio" id="rating-5" name="rating" value="5">
+          <label for="rating-5">★★★★★ 5 Stars</label>
+        </div>
+        <div class="filter-option">
+          <input type="radio" id="rating-4" name="rating" value="4">
+          <label for="rating-4">★★★★☆ 4+ Stars</label>
+        </div>
+        <div class="filter-option">
+          <input type="radio" id="rating-3" name="rating" value="3">
+          <label for="rating-3">★★★☆☆ 3+ Stars</label>
+        </div>
+      </div>
+
+      <!-- Sort By -->
+      <div class="filter-group">
+        <h4>Sort By</h4>
+        <form>
+          <select style="width: 100%; margin-bottom: 0;">
+            <option value="popular">Popularity</option>
+            <option value="top-rated">Top Rated</option>
+            <option value="newest">Newest First</option>
+            <option value="oldest">Oldest First</option>
+            <option value="a-z">A - Z</option>
+          </select>
+        </form>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main>
+      <div class="grid grid-3">
+        <!-- Book 1 -->
+        <div class="book-card">
+          <div class="book-card-image">
+            <span>Book Cover Image</span>
+          </div>
+          <div class="book-card-content">
+            <h3 class="book-card-title">The Midnight Library</h3>
+            <p class="book-card-author">Matt Haig</p>
+            <div style="margin-bottom: var(--spacing-sm);">
+              <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Fiction</span>
+            </div>
+            <div class="rating">
+              <span class="stars">★★★★★</span> 4.8/5 (124)
+            </div>
+            <p class="review-snippet">"A haunting exploration of life's what-ifs and infinite possibilities..."</p>
+            <div class="book-card-footer">
+              <a href="book-detail.html" class="btn btn-small btn-secondary">Read Review</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 2 -->
+        <div class="book-card">
+          <div class="book-card-image">
+            <span>Book Cover Image</span>
+          </div>
+          <div class="book-card-content">
+            <h3 class="book-card-title">Piranesi</h3>
+            <p class="book-card-author">Susanna Clarke</p>
+            <div style="margin-bottom: var(--spacing-sm);">
+              <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Fantasy</span>
+            </div>
+            <div class="rating">
+              <span class="stars">★★★★☆</span> 4.6/5 (89)
+            </div>
+            <p class="review-snippet">"An enigmatic masterpiece that defies genre. Mesmerizing and unsettling..."</p>
+            <div class="book-card-footer">
+              <a href="book-detail.html" class="btn btn-small btn-secondary">Read Review</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 3 -->
+        <div class="book-card">
+          <div class="book-card-image">
+            <span>Book Cover Image</span>
+          </div>
+          <div class="book-card-content">
+            <h3 class="book-card-title">Project Hail Mary</h3>
+            <p class="book-card-author">Andy Weir</p>
+            <div style="margin-bottom: var(--spacing-sm);">
+              <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Sci-Fi</span>
+            </div>
+            <div class="rating">
+              <span class="stars">★★★★★</span> 4.7/5 (156)
+            </div>
+            <p class="review-snippet">"Weir delivers pulse-pounding science fiction with a protagonist as charming as resourceful..."</p>
+            <div class="book-card-footer">
+              <a href="book-detail.html" class="btn btn-small btn-secondary">Read Review</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 4 -->
+        <div class="book-card">
+          <div class="book-card-image">
+            <span>Book Cover Image</span>
+          </div>
+          <div class="book-card-content">
+            <h3 class="book-card-title">Atomic Habits</h3>
+            <p class="book-card-author">James Clear</p>
+            <div style="margin-bottom: var(--spacing-sm);">
+              <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Self-Help</span>
+            </div>
+            <div class="rating">
+              <span class="stars">★★★★☆</span> 4.5/5 (201)
+            </div>
+            <p class="review-snippet">"A practical guide to behavioral change that transcends self-help clichés. Research-backed..."</p>
+            <div class="book-card-footer">
+              <a href="book-detail.html" class="btn btn-small btn-secondary">Read Review</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 5 -->
+        <div class="book-card">
+          <div class="book-card-image">
+            <span>Book Cover Image</span>
+          </div>
+          <div class="book-card-content">
+            <h3 class="book-card-title">The Song of Achilles</h3>
+            <p class="book-card-author">Madeline Miller</p>
+            <div style="margin-bottom: var(--spacing-sm);">
+              <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Fiction</span>
+            </div>
+            <div class="rating">
+              <span class="stars">★★★★★</span> 4.9/5 (178)
+            </div>
+            <p class="review-snippet">"A deeply moving retelling of ancient mythology through an intimately human lens..."</p>
+            <div class="book-card-footer">
+              <a href="book-detail.html" class="btn btn-small btn-secondary">Read Review</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 6 -->
+        <div class="book-card">
+          <div class="book-card-image">
+            <span>Book Cover Image</span>
+          </div>
+          <div class="book-card-content">
+            <h3 class="book-card-title">Educated</h3>
+            <p class="book-card-author">Tara Westover</p>
+            <div style="margin-bottom: var(--spacing-sm);">
+              <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Biography</span>
+            </div>
+            <div class="rating">
+              <span class="stars">★★★★★</span> 4.8/5 (267)
+            </div>
+            <p class="review-snippet">"Tara Westover's memoir is a harrowing account of resilience and intellectual awakening..."</p>
+            <div class="book-card-footer">
+              <a href="book-detail.html" class="btn btn-small btn-secondary">Read Review</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>About LuminaReads</h4>
+        <p>A premier platform for academic and recreational book reviews, connecting readers and celebrating literature in all its forms.</p>
+        <div class="social-links">
+          <a href="#" title="Facebook">f</a>
+          <a href="#" title="Twitter">𝕏</a>
+          <a href="#" title="Instagram">📷</a>
+          <a href="#" title="LinkedIn">in</a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="books.html">Browse Books</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="profile.html">My Profile</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#privacy">Privacy Policy</a></li>
+          <li><a href="#terms">Terms of Service</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Get in Touch</h4>
+        <p>Email: <a href="mailto:hello@luminareads.edu">hello@luminareads.edu</a></p>
+        <p>Located at: University Literary Institute<br>Building A, Room 204</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 LuminaReads. All rights reserved. | Crafted for literature lovers everywhere.</p>
+    </div>
+  </footer>
+</body>
+</html>
