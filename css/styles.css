@@ -1213,11 +1213,21 @@ textarea {
 
   .book-detail-header {
     grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
     padding: var(--spacing-lg);
   }
 
   .book-detail-image {
     height: 350px;
+  }
+
+  .review-content {
+    padding: var(--spacing-lg) var(--spacing-md);
+    margin: var(--spacing-lg) auto;
+  }
+
+  .comment-section {
+    padding: 0 var(--spacing-md);
   }
 
   .profile-banner {
@@ -1350,12 +1360,33 @@ textarea {
     font-size: 1.75rem;
   }
 
+  .book-detail-header {
+    padding: var(--spacing-md) var(--spacing-sm);
+  }
+
   .book-detail-image {
     height: 260px;
   }
 
+  .book-detail-info h1 {
+    font-size: 1.7rem;
+  }
+
   .book-meta {
     gap: var(--spacing-sm);
+  }
+
+  .rating-badge {
+    width: 100%;
+    text-align: center;
+  }
+
+  .review-content {
+    padding: var(--spacing-md);
+  }
+
+  .comment-section {
+    padding: 0 var(--spacing-sm);
   }
 
   .footer-container {
