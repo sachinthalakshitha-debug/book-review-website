@@ -14,6 +14,7 @@
   <header>
     <div class="header-container">
       <div class="logo">Lumina<span>Reads</span></div>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -29,93 +30,93 @@
   <!-- ============================================================
        PAGE TITLE
        ============================================================ -->
-  <section style="background-color: var(--hover-bg); padding: var(--spacing-xl) var(--spacing-lg); border-bottom: 1px solid var(--border-color);">
+  <section class="hero" style="background-color: var(--hover-bg); padding: var(--spacing-xl) var(--spacing-lg); border-bottom: 1px solid var(--border-color);">
     <div class="container">
-      <h1 style="margin-bottom: var(--spacing-sm);">Explore Our Collection</h1>
+      <h1 style="color: #d4af37; margin-bottom: var(--spacing-sm);">Explore Our Collection</h1>
       <p class="subtitle" style="margin: 0;">Discover thoughtfully reviewed books across all genres</p>
     </div>
   </section>
 
   <!-- ============================================================
-       MAIN CONTENT AREA WITH SIDEBAR
+       FILTERS SECTION
        ============================================================ -->
-  <div class="content-wrapper">
-    <!-- Sidebar with Filters -->
-    <aside class="sidebar">
-      <h3 style="margin-bottom: var(--spacing-lg);">Filter & Sort</h3>
+  <section class="section" style="padding: 0;">
+    <div class="content-wrapper">
+      <!-- Sidebar Filters -->
+      <aside class="sidebar">
+        <div class="filter-group" style="margin-bottom: var(--spacing-md); border-bottom: 1px solid var(--border-color); padding-bottom: var(--spacing-md);">
+          <h4 style="font-family: var(--font-serif); font-size: 1.1rem; color: var(--secondary); margin-bottom: var(--spacing-sm); border-bottom: 2px solid var(--accent); padding-bottom: 5px;">Search</h4>
+          <input type="text" id="search-input" placeholder="Search title, author..." style="width: 100%; padding: var(--spacing-sm); border: 1px solid var(--border-color); border-radius: var(--radius-sm); font-size: 0.95rem; margin-bottom: 0;">
+        </div>
+        
+        <div class="filter-group" style="margin-bottom: var(--spacing-md); border-bottom: 1px solid var(--border-color); padding-bottom: var(--spacing-md);">
+          <h4 style="font-family: var(--font-serif); font-size: 1.1rem; color: var(--secondary); margin-bottom: var(--spacing-sm); border-bottom: 2px solid var(--accent); padding-bottom: 5px;">Genres</h4>
+          <div class="filter-option">
+            <input type="checkbox" id="genre-fiction" value="Fiction" class="genre-checkbox">
+            <label for="genre-fiction">Fiction</label>
+          </div>
+          <div class="filter-option">
+            <input type="checkbox" id="genre-scifi" value="Sci-Fi" class="genre-checkbox">
+            <label for="genre-scifi">Science Fiction</label>
+          </div>
+          <div class="filter-option">
+            <input type="checkbox" id="genre-fantasy" value="Fantasy" class="genre-checkbox">
+            <label for="genre-fantasy">Fantasy</label>
+          </div>
+          <div class="filter-option">
+            <input type="checkbox" id="genre-biography" value="Biography" class="genre-checkbox">
+            <label for="genre-biography">Biography</label>
+          </div>
+          <div class="filter-option">
+            <input type="checkbox" id="genre-selfhelp" value="Self-Help" class="genre-checkbox">
+            <label for="genre-selfhelp">Self-Help</label>
+          </div>
+        </div>
 
-      <!-- Genre Filter -->
-      <div class="filter-group">
-        <h4>Genre</h4>
-        <div class="filter-option">
-          <input type="radio" id="genre-all" name="genre" value="all" checked>
-          <label for="genre-all">All Genres</label>
+        <div class="filter-group" style="margin-bottom: var(--spacing-md); padding-bottom: 0;">
+          <h4 style="font-family: var(--font-serif); font-size: 1.1rem; color: var(--secondary); margin-bottom: var(--spacing-sm); border-bottom: 2px solid var(--accent); padding-bottom: 5px;">Minimum Rating</h4>
+          <div class="filter-option">
+            <input type="radio" name="rating-filter" id="rating-all" value="0" checked>
+            <label for="rating-all">All Ratings</label>
+          </div>
+          <div class="filter-option">
+            <input type="radio" name="rating-filter" id="rating-5" value="5">
+            <label for="rating-5">★★★★★ 5 Stars</label>
+          </div>
+          <div class="filter-option">
+            <input type="radio" name="rating-filter" id="rating-4" value="4">
+            <label for="rating-4">★★★★☆ 4+ Stars</label>
+          </div>
+          <div class="filter-option">
+            <input type="radio" name="rating-filter" id="rating-3" value="3">
+            <label for="rating-3">★★★☆☆ 3+ Stars</label>
+          </div>
         </div>
-        <div class="filter-option">
-          <input type="radio" id="genre-fiction" name="genre" value="fiction">
-          <label for="genre-fiction">Fiction</label>
-        </div>
-        <div class="filter-option">
-          <input type="radio" id="genre-scifi" name="genre" value="scifi">
-          <label for="genre-scifi">Science Fiction</label>
-        </div>
-        <div class="filter-option">
-          <input type="radio" id="genre-mystery" name="genre" value="mystery">
-          <label for="genre-mystery">Mystery</label>
-        </div>
-        <div class="filter-option">
-          <input type="radio" id="genre-biography" name="genre" value="biography">
-          <label for="genre-biography">Biography</label>
-        </div>
-        <div class="filter-option">
-          <input type="radio" id="genre-selfhelp" name="genre" value="selfhelp">
-          <label for="genre-selfhelp">Self-Help</label>
-        </div>
-      </div>
 
-      <!-- Rating Filter -->
-      <div class="filter-group">
-        <h4>Rating</h4>
-        <div class="filter-option">
-          <input type="radio" id="rating-all" name="rating" value="all" checked>
-          <label for="rating-all">All Ratings</label>
-        </div>
-        <div class="filter-option">
-          <input type="radio" id="rating-5" name="rating" value="5">
-          <label for="rating-5">★★★★★ 5 Stars</label>
-        </div>
-        <div class="filter-option">
-          <input type="radio" id="rating-4" name="rating" value="4">
-          <label for="rating-4">★★★★☆ 4+ Stars</label>
-        </div>
-        <div class="filter-option">
-          <input type="radio" id="rating-3" name="rating" value="3">
-          <label for="rating-3">★★★☆☆ 3+ Stars</label>
-        </div>
-      </div>
+        <button id="clear-filters-btn" class="btn btn-small btn-secondary" style="width: 100%; margin-top: var(--spacing-sm); justify-content: center;">Clear Filters</button>
+      </aside>
 
-      <!-- Sort By -->
-      <div class="filter-group">
-        <h4>Sort By</h4>
-        <form>
-          <select style="width: 100%; margin-bottom: 0;">
-            <option value="popular">Popularity</option>
-            <option value="top-rated">Top Rated</option>
-            <option value="newest">Newest First</option>
-            <option value="oldest">Oldest First</option>
-            <option value="a-z">A - Z</option>
-          </select>
-        </form>
-      </div>
-    </aside>
+      <!-- Main Directory Area -->
+      <main class="main-content">
+        <!-- Top Toolbar with Sort & Summary -->
+        <div style="background-color: var(--surface); padding: var(--spacing-sm) var(--spacing-md); border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: var(--spacing-lg); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--spacing-sm);">
+          <div id="results-count" style="font-weight: 500; color: var(--text-secondary);">Showing all books</div>
+          <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+            <label for="sort-select" style="font-weight: 600; font-size: 0.9rem; color: var(--text-secondary); margin: 0; white-space: nowrap;">Sort By:</label>
+            <select id="sort-select" style="padding: 6px 12px; border: 1px solid var(--border-color); border-radius: var(--radius-sm); background-color: var(--surface); cursor: pointer; margin-bottom: 0; width: auto;">
+              <option value="popularity">Popularity (Reviews)</option>
+              <option value="rating">Top Rated</option>
+              <option value="az">A - Z</option>
+              <option value="za">Z - A</option>
+            </select>
+          </div>
+        </div>
 
-    <!-- Main Content -->
-    <main>
-      <div class="grid grid-3">
+        <div class="grid grid-3" id="books-grid">
         <!-- Book 1 -->
         <div class="book-card">
           <div class="book-card-image">
-            <span>Book Cover Image</span>
+            <img src="photo/71ls-I6A5KL._SY466_.jpg" alt="The Midnight Library cover">
           </div>
           <div class="book-card-content">
             <h3 class="book-card-title">The Midnight Library</h3>
@@ -124,7 +125,7 @@
               <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Fiction</span>
             </div>
             <div class="rating">
-              <span class="stars">★★★★★</span> 4.8/5 (124)
+              <span class="stars">★★★★★</span> 5.0/5 (124)
             </div>
             <p class="review-snippet">"A haunting exploration of life's what-ifs and infinite possibilities..."</p>
             <div class="book-card-footer">
@@ -136,7 +137,7 @@
         <!-- Book 2 -->
         <div class="book-card">
           <div class="book-card-image">
-            <span>Book Cover Image</span>
+            <img src="photo/piranesi.jpg" alt="Piranesi cover">
           </div>
           <div class="book-card-content">
             <h3 class="book-card-title">Piranesi</h3>
@@ -145,7 +146,7 @@
               <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Fantasy</span>
             </div>
             <div class="rating">
-              <span class="stars">★★★★☆</span> 4.6/5 (89)
+              <span class="stars">★★★★★</span> 4.6/5 (89)
             </div>
             <p class="review-snippet">"An enigmatic masterpiece that defies genre. Mesmerizing and unsettling..."</p>
             <div class="book-card-footer">
@@ -157,7 +158,7 @@
         <!-- Book 3 -->
         <div class="book-card">
           <div class="book-card-image">
-            <span>Book Cover Image</span>
+            <img src="photo/Project Hail Mary.jpg" alt="Project Hail Mary cover">
           </div>
           <div class="book-card-content">
             <h3 class="book-card-title">Project Hail Mary</h3>
@@ -178,7 +179,7 @@
         <!-- Book 4 -->
         <div class="book-card">
           <div class="book-card-image">
-            <span>Book Cover Image</span>
+            <img src="photo/AtomicHabits.jpg" alt="Atomic Habits cover">
           </div>
           <div class="book-card-content">
             <h3 class="book-card-title">Atomic Habits</h3>
@@ -187,7 +188,7 @@
               <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Self-Help</span>
             </div>
             <div class="rating">
-              <span class="stars">★★★★☆</span> 4.5/5 (201)
+              <span class="stars">★★★★★</span> 4.5/5 (201)
             </div>
             <p class="review-snippet">"A practical guide to behavioral change that transcends self-help clichés. Research-backed..."</p>
             <div class="book-card-footer">
@@ -195,11 +196,10 @@
             </div>
           </div>
         </div>
-
         <!-- Book 5 -->
         <div class="book-card">
           <div class="book-card-image">
-            <span>Book Cover Image</span>
+            <img src="photo/song-of-achilles.jpg" alt="The Song of Achilles cover">
           </div>
           <div class="book-card-content">
             <h3 class="book-card-title">The Song of Achilles</h3>
@@ -208,19 +208,21 @@
               <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Fiction</span>
             </div>
             <div class="rating">
-              <span class="stars">★★★★★</span> 4.9/5 (178)
+              <span class="stars">★★★★★</span> 4.7/5 (342)
             </div>
-            <p class="review-snippet">"A deeply moving retelling of ancient mythology through an intimately human lens..."</p>
+            <p class="review-snippet">"A lyrical retelling of Achilles' legend, blending myth with emotional depth."</p>
             <div class="book-card-footer">
               <a href="book-detail.html" class="btn btn-small btn-secondary">Read Review</a>
             </div>
           </div>
         </div>
 
+
+
         <!-- Book 6 -->
         <div class="book-card">
           <div class="book-card-image">
-            <span>Book Cover Image</span>
+            <img src="photo/Educated.jpg" alt="Educated cover">
           </div>
           <div class="book-card-content">
             <h3 class="book-card-title">Educated</h3>
@@ -237,9 +239,646 @@
             </div>
           </div>
         </div>
+
+        <!-- Book 7 -->
+        <div class="book-card">
+          <div class="book-card-image">
+            <img src="photo/To kill a morking bird.jpg" alt="To Kill a Mockingbird cover">
+          </div>
+          <div class="book-card-content">
+            <h3 class="book-card-title">To Kill a Mockingbird</h3>
+            <p class="book-card-author">Harper Lee</p>
+            <div style="margin-bottom: var(--spacing-sm);">
+              <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Fiction</span>
+            </div>
+            <div class="rating">
+              <span class="stars">★★★★★</span> 4.8/5 (298)
+            </div>
+            <p class="review-snippet">"A powerful exploration of moral growth through a child's eyes. Harper Lee's masterpiece is timeless and essential..."</p>
+            <div class="book-card-footer">
+              <a href="book-detail.html" class="btn btn-small btn-secondary">Read Review</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 8 -->
+        <div class="book-card">
+          <div class="book-card-image">
+            <img src="photo/The Name of the Wind.jpg" alt="The Name of the Wind cover">
+          </div>
+          <div class="book-card-content">
+            <h3 class="book-card-title">The Name of the Wind</h3>
+            <p class="book-card-author">Patrick Rothfuss</p>
+            <div style="margin-bottom: var(--spacing-sm);">
+              <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Fantasy</span>
+            </div>
+            <div class="rating">
+              <span class="stars">★★★★★</span> 4.5/5 (312)
+            </div>
+            <p class="review-snippet">"A mesmerizing tale of a legendary figure and his rise to power. Rothfuss's prose is enchanting and lyrical..."</p>
+            <div class="book-card-footer">
+              <a href="book-detail.html" class="btn btn-small btn-secondary">Read Review</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 9 -->
+        <div class="book-card">
+          <div class="book-card-image">
+            <img src="photo/Foundation.jpg" alt="Foundation cover">
+          </div>
+          <div class="book-card-content">
+            <h3 class="book-card-title">Foundation</h3>
+            <p class="book-card-author">Isaac Asimov</p>
+            <div style="margin-bottom: var(--spacing-sm);">
+              <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Sci-Fi</span>
+            </div>
+            <div class="rating">
+              <span class="stars">★★★★☆</span> 3.8/5 (234)
+            </div>
+            <p class="review-snippet">"Asimov's science fiction epic explores the rise and fall of civilizations. A foundational work of the genre..."</p>
+            <div class="book-card-footer">
+              <a href="book-detail.html" class="btn btn-small btn-secondary">Read Review</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 10 -->
+        <div class="book-card">
+          <div class="book-card-image">
+            <img src="photo/The Power of Now.jpg" alt="The Power of Now cover">
+          </div>
+          <div class="book-card-content">
+            <h3 class="book-card-title">The Power of Now</h3>
+            <p class="book-card-author">Eckhart Tolle</p>
+            <div style="margin-bottom: var(--spacing-sm);">
+              <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Self-Help</span>
+            </div>
+            <div class="rating">
+              <span class="stars">★★★★☆</span> 3.9/5 (189)
+            </div>
+            <p class="review-snippet">"Tolle's philosophy on mindfulness and presence transforms how you experience life. Profound and practical wisdom..."</p>
+            <div class="book-card-footer">
+              <a href="book-detail.html" class="btn btn-small btn-secondary">Read Review</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 11 -->
+        <div class="book-card">
+          <div class="book-card-image">
+            <img src="photo/1984.jpg" alt="1984 cover">
+          </div>
+          <div class="book-card-content">
+            <h3 class="book-card-title">1984</h3>
+            <p class="book-card-author">George Orwell</p>
+            <div style="margin-bottom: var(--spacing-sm);">
+              <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Fiction</span>
+            </div>
+            <div class="rating">
+              <span class="stars">★★★★★</span> 4.7/5 (356)
+            </div>
+            <p class="review-snippet">"Orwell's dystopian vision is both terrifying and prescient. A chilling examination of power and control..."</p>
+            <div class="book-card-footer">
+              <a href="book-detail.html" class="btn btn-small btn-secondary">Read Review</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 12 -->
+        <div class="book-card">
+          <div class="book-card-image">
+            <img src="photo/A Game of Thrones.jpg" alt="A Game of Thrones cover">
+          </div>
+          <div class="book-card-content">
+            <h3 class="book-card-title">A Game of Thrones</h3>
+            <p class="book-card-author">George R.R. Martin</p>
+            <div style="margin-bottom: var(--spacing-sm);">
+              <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Fantasy</span>
+            </div>
+            <div class="rating">
+              <span class="stars">★★★★★</span> 4.6/5 (423)
+            </div>
+            <p class="review-snippet">"Martin's epic fantasy saga is complex and immersive with unforgettable characters and shocking twists..."</p>
+            <div class="book-card-footer">
+              <a href="book-detail.html" class="btn btn-small btn-secondary">Read Review</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 13 -->
+        <div class="book-card">
+          <div class="book-card-image">
+            <img src="photo/Neuromancer.jpg" alt="Neuromancer cover">
+          </div>
+          <div class="book-card-content">
+            <h3 class="book-card-title">Neuromancer</h3>
+            <p class="book-card-author">William Gibson</p>
+            <div style="margin-bottom: var(--spacing-sm);">
+              <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Sci-Fi</span>
+            </div>
+            <div class="rating">
+              <span class="stars">★★★★☆</span> 3.7/5 (156)
+            </div>
+            <p class="review-snippet">"Gibson's cyberpunk classic is visionary and groundbreaking. A seminal work that shaped the entire genre..."</p>
+            <div class="book-card-footer">
+              <a href="book-detail.html" class="btn btn-small btn-secondary">Read Review</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 14 -->
+        <div class="book-card">
+          <div class="book-card-image">
+            <img src="photo/Steve Jobs.jpg" alt="Steve Jobs cover">
+          </div>
+          <div class="book-card-content">
+            <h3 class="book-card-title">Steve Jobs</h3>
+            <p class="book-card-author">Walter Isaacson</p>
+            <div style="margin-bottom: var(--spacing-sm);">
+              <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Biography</span>
+            </div>
+            <div class="rating">
+              <span class="stars">★★★★★</span> 4.5/5 (289)
+            </div>
+            <p class="review-snippet">"Isaacson's comprehensive biography reveals the visionary and the flawed man behind Apple. Fascinating and intimate..."</p>
+            <div class="book-card-footer">
+              <a href="book-detail.html" class="btn btn-small btn-secondary">Read Review</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 15 -->
+        <div class="book-card">
+          <div class="book-card-image">
+            <img src="photo/The 7 Habits of Highly Effective People.png" alt="The 7 Habits of Highly Effective People cover">
+          </div>
+          <div class="book-card-content">
+            <h3 class="book-card-title">The 7 Habits of Highly Effective People</h3>
+            <p class="book-card-author">Stephen Covey</p>
+            <div style="margin-bottom: var(--spacing-sm);">
+              <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Self-Help</span>
+            </div>
+            <div class="rating">
+              <span class="stars">★★★★☆</span> 3.6/5 (167)
+            </div>
+            <p class="review-snippet">"Covey's timeless framework for personal and professional effectiveness remains incredibly relevant and valuable..."</p>
+            <div class="book-card-footer">
+              <a href="book-detail.html" class="btn btn-small btn-secondary">Read Review</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 16 -->
+        <div class="book-card">
+          <div class="book-card-image">
+            <img src="photo/Pride and Prejudice.jpg" alt="Pride and Prejudice cover">
+          </div>
+          <div class="book-card-content">
+            <h3 class="book-card-title">Pride and Prejudice</h3>
+            <p class="book-card-author">Jane Austen</p>
+            <div style="margin-bottom: var(--spacing-sm);">
+              <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Fiction</span>
+            </div>
+            <div class="rating">
+              <span class="stars">★★★★★</span> 4.6/5 (312)
+            </div>
+            <p class="review-snippet">"Austen's wit and social commentary shine through this romance. A brilliant character study wrapped in romance..."</p>
+            <div class="book-card-footer">
+              <a href="book-detail.html" class="btn btn-small btn-secondary">Read Review</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 17 -->
+        <div class="book-card">
+          <div class="book-card-image">
+            <img src="photo/The Hobbit.jpg" alt="The Hobbit cover">
+          </div>
+          <div class="book-card-content">
+            <h3 class="book-card-title">The Hobbit</h3>
+            <p class="book-card-author">J.R.R. Tolkien</p>
+            <div style="margin-bottom: var(--spacing-sm);">
+              <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Fantasy</span>
+            </div>
+            <div class="rating">
+              <span class="stars">★★★★★</span> 4.7/5 (301)
+            </div>
+            <p class="review-snippet">"Tolkien's adventure tale is delightful and inventive. A perfect introduction to his richly detailed fantasy world..."</p>
+            <div class="book-card-footer">
+              <a href="book-detail.html" class="btn btn-small btn-secondary">Read Review</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 18 -->
+        <div class="book-card">
+          <div class="book-card-image">
+            <img src="photo/Blindsight.jpg" alt="Blindsight cover">
+          </div>
+          <div class="book-card-content">
+            <h3 class="book-card-title">Blindsight</h3>
+            <p class="book-card-author">Peter Watts</p>
+            <div style="margin-bottom: var(--spacing-sm);">
+              <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Sci-Fi</span>
+            </div>
+            <div class="rating">
+              <span class="stars">★★★★☆</span> 3.9/5 (98)
+            </div>
+            <p class="review-snippet">"Watts delivers hard science fiction that challenges consciousness itself. A mind-bending exploration of first contact..."</p>
+            <div class="book-card-footer">
+              <a href="book-detail.html" class="btn btn-small btn-secondary">Read Review</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 19 -->
+        <div class="book-card">
+          <div class="book-card-image">
+            <img src="photo/Becoming.jpg" alt="Becoming cover">
+          </div>
+          <div class="book-card-content">
+            <h3 class="book-card-title">Becoming</h3>
+            <p class="book-card-author">Michelle Obama</p>
+            <div style="margin-bottom: var(--spacing-sm);">
+              <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Biography</span>
+            </div>
+            <div class="rating">
+              <span class="stars">★★★★★</span> 4.7/5 (334)
+            </div>
+            <p class="review-snippet">"Michelle Obama's memoir is inspiring and deeply personal. A powerful journey of resilience and self-discovery..."</p>
+            <div class="book-card-footer">
+              <a href="book-detail.html" class="btn btn-small btn-secondary">Read Review</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 20 -->
+        <div class="book-card">
+          <div class="book-card-image">
+            <img src="photo/Emotional Intelligence.jpg" alt="Emotional Intelligence cover">
+          </div>
+          <div class="book-card-content">
+            <h3 class="book-card-title">Emotional Intelligence</h3>
+            <p class="book-card-author">Daniel Goleman</p>
+            <div style="margin-bottom: var(--spacing-sm);">
+              <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Self-Help</span>
+            </div>
+            <div class="rating">
+              <span class="stars">★★★★☆</span> 3.8/5 (145)
+            </div>
+            <p class="review-snippet">"Goleman's groundbreaking work on emotional intelligence revolutionizes how we think about intelligence itself..."</p>
+            <div class="book-card-footer">
+              <a href="book-detail.html" class="btn btn-small btn-secondary">Read Review</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 21 -->
+        <div class="book-card">
+          <div class="book-card-image">
+            <img src="photo/The Catcher in the Rye.jpg" alt="The Catcher in the Rye cover">
+          </div>
+          <div class="book-card-content">
+            <h3 class="book-card-title">The Catcher in the Rye</h3>
+            <p class="book-card-author">J.D. Salinger</p>
+            <div style="margin-bottom: var(--spacing-sm);">
+              <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Fiction</span>
+            </div>
+            <div class="rating">
+              <span class="stars">★★★★☆</span> 3.7/5 (267)
+            </div>
+            <p class="review-snippet">"Salinger's portrayal of adolescent alienation is iconic and relatable. A timeless exploration of teenage angst..."</p>
+            <div class="book-card-footer">
+              <a href="book-detail.html" class="btn btn-small btn-secondary">Read Review</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 22 -->
+        <div class="book-card">
+          <div class="book-card-image">
+            <img src="photo/Mistborn.jpg" alt="Mistborn cover">
+          </div>
+          <div class="book-card-content">
+            <h3 class="book-card-title">Mistborn</h3>
+            <p class="book-card-author">Brandon Sanderson</p>
+            <div style="margin-bottom: var(--spacing-sm);">
+              <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Fantasy</span>
+            </div>
+            <div class="rating">
+              <span class="stars">★★★★★</span> 4.5/5 (223)
+            </div>
+            <p class="review-snippet">"Sanderson's intricate magic system and engaging plot make this a page-turner. A fresh take on fantasy..."</p>
+            <div class="book-card-footer">
+              <a href="book-detail.html" class="btn btn-small btn-secondary">Read Review</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 23 -->
+        <div class="book-card">
+          <div class="book-card-image">
+            <img src="photo/The Three-Body Problem.jpg" alt="The Three-Body Problem cover">
+          </div>
+          <div class="book-card-content">
+            <h3 class="book-card-title">The Three-Body Problem</h3>
+            <p class="book-card-author">Liu Cixin</p>
+            <div style="margin-bottom: var(--spacing-sm);">
+              <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Sci-Fi</span>
+            </div>
+            <div class="rating">
+              <span class="stars">★★★★☆</span> 3.9/5 (189)
+            </div>
+            <p class="review-snippet">"Liu's cosmic sci-fi is ambitious and thought-provoking. A meditation on humanity's place in the universe..."</p>
+            <div class="book-card-footer">
+              <a href="book-detail.html" class="btn btn-small btn-secondary">Read Review</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 24 -->
+        <div class="book-card">
+          <div class="book-card-image">
+            <img src="photo/The Autobiography of Benjamin Franklin.jpg" alt="The Autobiography of Benjamin Franklin cover">
+          </div>
+          <div class="book-card-content">
+            <h3 class="book-card-title">The Autobiography of Benjamin Franklin</h3>
+            <p class="book-card-author">Benjamin Franklin</p>
+            <div style="margin-bottom: var(--spacing-sm);">
+              <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Biography</span>
+            </div>
+            <div class="rating">
+              <span class="stars">★★★★☆</span> 3.8/5 (156)
+            </div>
+            <p class="review-snippet">"Franklin's account of his rise from poverty to prominence is fascinating. A testament to self-improvement..."</p>
+            <div class="book-card-footer">
+              <a href="book-detail.html" class="btn btn-small btn-secondary">Read Review</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 25 -->
+        <div class="book-card">
+          <div class="book-card-image">
+            <img src="photo/Think and Grow Rich.jpg" alt="Think and Grow Rich cover">
+          </div>
+          <div class="book-card-content">
+            <h3 class="book-card-title">Think and Grow Rich</h3>
+            <p class="book-card-author">Napoleon Hill</p>
+            <div style="margin-bottom: var(--spacing-sm);">
+              <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Self-Help</span>
+            </div>
+            <div class="rating">
+              <span class="stars">★★★★☆</span> 3.6/5 (201)
+            </div>
+            <p class="review-snippet">"Hill's timeless principles for success and wealth-building have influenced millions. A classic of personal development..."</p>
+            <div class="book-card-footer">
+              <a href="book-detail.html" class="btn btn-small btn-secondary">Read Review</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 26 -->
+        <div class="book-card">
+          <div class="book-card-image">
+            <img src="photo/Beloved.jpg" alt="Beloved cover">
+          </div>
+          <div class="book-card-content">
+            <h3 class="book-card-title">Beloved</h3>
+            <p class="book-card-author">Toni Morrison</p>
+            <div style="margin-bottom: var(--spacing-sm);">
+              <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Fiction</span>
+            </div>
+            <div class="rating">
+              <span class="stars">★★★★★</span> 4.6/5 (234)
+            </div>
+            <p class="review-snippet">"Morrison's masterpiece addresses slavery and trauma with lyrical beauty. A profound exploration of love and loss..."</p>
+            <div class="book-card-footer">
+              <a href="book-detail.html" class="btn btn-small btn-secondary">Read Review</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 27 -->
+        <div class="book-card">
+          <div class="book-card-image">
+            <img src="photo/The Poppy War.jpg" alt="The Poppy War cover">
+          </div>
+          <div class="book-card-content">
+            <h3 class="book-card-title">The Poppy War</h3>
+            <p class="book-card-author">R.F. Kuang</p>
+            <div style="margin-bottom: var(--spacing-sm);">
+              <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Fantasy</span>
+            </div>
+            <div class="rating">
+              <span class="stars">★★★★☆</span> 3.9/5 (267)
+            </div>
+            <p class="review-snippet">"Kuang's dark fantasy features stunning prose and complex characters. An unforgettable journey of power and war..."</p>
+            <div class="book-card-footer">
+              <a href="book-detail.html" class="btn btn-small btn-secondary">Read Review</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 28 -->
+        <div class="book-card">
+          <div class="book-card-image">
+            <img src="photo/Hyperion.jpg" alt="Hyperion cover">
+          </div>
+          <div class="book-card-content">
+            <h3 class="book-card-title">Hyperion</h3>
+            <p class="book-card-author">Dan Simmons</p>
+            <div style="margin-bottom: var(--spacing-sm);">
+              <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Sci-Fi</span>
+            </div>
+            <div class="rating">
+              <span class="stars">★★★★☆</span> 3.8/5 (145)
+            </div>
+            <p class="review-snippet">"Simmons' epic space opera blends literary richness with spectacular sci-fi. A towering achievement of imagination..."</p>
+            <div class="book-card-footer">
+              <a href="book-detail.html" class="btn btn-small btn-secondary">Read Review</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 29 -->
+        <div class="book-card">
+          <div class="book-card-image">
+            <img src="photo/A Brief History of Time.jpg" alt="A Brief History of Time cover">
+          </div>
+          <div class="book-card-content">
+            <h3 class="book-card-title">A Brief History of Time</h3>
+            <p class="book-card-author">Stephen Hawking</p>
+            <div style="margin-bottom: var(--spacing-sm);">
+              <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Biography</span>
+            </div>
+            <div class="rating">
+              <span class="stars">★★★★☆</span> 3.7/5 (212)
+            </div>
+            <p class="review-snippet">"Hawking explains complex physics in accessible terms. A fascinating journey through space and time..."</p>
+            <div class="book-card-footer">
+              <a href="book-detail.html" class="btn btn-small btn-secondary">Read Review</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 30 -->
+        <div class="book-card">
+          <div class="book-card-image">
+            <img src="photo/The Innovators.jpg" alt="The Innovators cover">
+          </div>
+          <div class="book-card-content">
+            <h3 class="book-card-title">The Innovators</h3>
+            <p class="book-card-author">Walter Isaacson</p>
+            <div style="margin-bottom: var(--spacing-sm);">
+              <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Biography</span>
+            </div>
+            <div class="rating">
+              <span class="stars">★★★★☆</span> 3.8/5 (178)
+            </div>
+            <p class="review-snippet">"Isaacson traces the lives of digital pioneers. A compelling account of how technology shaped our world..."</p>
+            <div class="book-card-footer">
+              <a href="book-detail.html" class="btn btn-small btn-secondary">Read Review</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 31 -->
+        <div class="book-card">
+          <div class="book-card-image">
+            <img src="photo/Sapiens.jpg" alt="Sapiens cover">
+          </div>
+          <div class="book-card-content">
+            <h3 class="book-card-title">Sapiens: A Brief History of Humankind</h3>
+            <p class="book-card-author">Yuval Noah Harari</p>
+            <div style="margin-bottom: var(--spacing-sm);">
+              <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Self-Help</span>
+            </div>
+            <div class="rating">
+              <span class="stars">★★★★★</span> 4.6/5 (267)
+            </div>
+            <p class="review-snippet">"Harari's sweeping perspective on human history is illuminating and thought-provoking. A paradigm-shifting read..."</p>
+            <div class="book-card-footer">
+              <a href="book-detail.html" class="btn btn-small btn-secondary">Read Review</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 32 -->
+        <div class="book-card">
+          <div class="book-card-image">
+            <img src="photo/The Great Gatsby.jpg" alt="The Great Gatsby cover">
+          </div>
+          <div class="book-card-content">
+            <h3 class="book-card-title">The Great Gatsby</h3>
+            <p class="book-card-author">F. Scott Fitzgerald</p>
+            <div style="margin-bottom: var(--spacing-sm);">
+              <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Fiction</span>
+            </div>
+            <div class="rating">
+              <span class="stars">★★★★☆</span> 3.9/5 (245)
+            </div>
+            <p class="review-snippet">"A timeless masterpiece that captures the essence of the Jazz Age. Fitzgerald's prose is breathtaking and haunting..."</p>
+            <div class="book-card-footer">
+              <a href="book-detail.html" class="btn btn-small btn-secondary">Read Review</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 33 -->
+        <div class="book-card">
+          <div class="book-card-image">
+            <img src="photo/Dune.jpg" alt="Dune cover">
+          </div>
+          <div class="book-card-content">
+            <h3 class="book-card-title">Dune</h3>
+            <p class="book-card-author">Frank Herbert</p>
+            <div style="margin-bottom: var(--spacing-sm);">
+              <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Sci-Fi</span>
+            </div>
+            <div class="rating">
+              <span class="stars">★★★★★</span> 5.0/5 (389)
+            </div>
+            <p class="review-snippet">"Frank Herbert's epic science fiction remains unmatched in scope and imagination. A masterclass in world-building..."</p>
+            <div class="book-card-footer">
+              <a href="book-detail.html" class="btn btn-small btn-secondary">Read Review</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 34 -->
+        <div class="book-card">
+          <div class="book-card-image">
+            <img src="photo/The Murder Of Roger Ackroyd.jpg" alt="The Murder of Roger Ackroyd cover">
+          </div>
+          <div class="book-card-content">
+            <h3 class="book-card-title">The Murder of Roger Ackroyd</h3>
+            <p class="book-card-author">Agatha Christie</p>
+            <div style="margin-bottom: var(--spacing-sm);">
+              <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Fiction</span>
+            </div>
+            <div class="rating">
+              <span class="stars">★★★★☆</span> 3.8/5 (198)
+            </div>
+            <p class="review-snippet">"A brilliant whodunit with a shocking twist that revolutionized the mystery genre. Christie's plotting is exceptional..."</p>
+            <div class="book-card-footer">
+              <a href="book-detail.html" class="btn btn-small btn-secondary">Read Review</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 35 -->
+        <div class="book-card">
+          <div class="book-card-image">
+            <img src="photo/The Therapist.jpg" alt="The Therapist cover">
+          </div>
+          <div class="book-card-content">
+            <h3 class="book-card-title">The Therapist</h3>
+            <p class="book-card-author">B.A. Paris</p>
+            <div style="margin-bottom: var(--spacing-sm);">
+              <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Fiction</span>
+            </div>
+            <div class="rating">
+              <span class="stars">★★★★☆</span> 3.7/5 (112)
+            </div>
+            <p class="review-snippet">"A psychological thriller that keeps you guessing until the very end. Paris crafts suspense with masterful precision..."</p>
+            <div class="book-card-footer">
+              <a href="book-detail.html" class="btn btn-small btn-secondary">Read Review</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 36 -->
+        <div class="book-card">
+          <div class="book-card-image">
+            <img src="photo/Mindfulness For Beginners.jpg" alt="Mindfulness for Beginners cover">
+          </div>
+          <div class="book-card-content">
+            <h3 class="book-card-title">Mindfulness for Beginners</h3>
+            <p class="book-card-author">Jon Kabat-Zinn</p>
+            <div style="margin-bottom: var(--spacing-sm);">
+              <span style="display: inline-block; background-color: var(--hover-bg); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--secondary);">Self-Help</span>
+            </div>
+            <div class="rating">
+              <span class="stars">★★★★☆</span> 3.8/5 (167)
+            </div>
+            <p class="review-snippet">"An accessible guide to mindfulness practice that transforms how you relate to life. Kabat-Zinn's wisdom is profound..."</p>
+            <div class="book-card-footer">
+              <a href="book-detail.html" class="btn btn-small btn-secondary">Read Review</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Empty State -->
+      <div id="empty-state" style="display: none; text-align: center; padding: var(--spacing-xxl) var(--spacing-lg); background-color: var(--surface); border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-top: var(--spacing-lg); grid-column: span 3;">
+        <div style="font-size: 3rem; margin-bottom: var(--spacing-md);">📚</div>
+        <h3 style="margin-bottom: var(--spacing-sm); font-family: var(--font-serif);">No books match your criteria</h3>
+        <p style="color: var(--text-light); margin-bottom: var(--spacing-lg);">Try clearing your filters or searching for something else.</p>
       </div>
     </main>
   </div>
+</section>
 
   <!-- ============================================================
        FOOTER
@@ -284,5 +923,6 @@
       <p>&copy; 2024 LuminaReads. All rights reserved. | Crafted for literature lovers everywhere.</p>
     </div>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 </html>
